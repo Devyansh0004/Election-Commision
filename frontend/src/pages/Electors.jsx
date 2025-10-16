@@ -16,6 +16,7 @@ const ActionCard = ({ title, description, href, icon, badge }) => (
     href={href}
     target="_blank"
     rel="noreferrer"
+    aria-label={`${title} — ${description}`}
     className="group relative rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
   >
     <div className="flex items-start gap-4">
@@ -45,6 +46,7 @@ const PillLink = ({ href, children }) => (
     href={href}
     target="_blank"
     rel="noreferrer"
+    aria-label={typeof children === 'string' ? children : 'Open link'}
     className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-sm font-medium text-slate-800 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-800"
   >
     {children}

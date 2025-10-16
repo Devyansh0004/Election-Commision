@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const NavMenu = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -18,7 +19,15 @@ const NavMenu = ({ menuOpen, setMenuOpen }) => {
         <div>
           <h3 className="text-yellow-400 font-semibold mb-2">VOTER'S CORNER</h3>
           <ul className="space-y-1">
-            <li className='hover:text-slate-200 text-white hover:translate-x-1 transition-all duration-200 cursor-pointer'>Electors Registration</li>
+            <li>
+              <Link
+                to="/electors"
+                onClick={() => setMenuOpen(false)}
+                className='block hover:text-slate-200 text-white hover:translate-x-1 transition-all duration-200'
+              >
+                Electors
+              </Link>
+            </li>
             <li className='hover:text-slate-200 text-white hover:translate-x-1 transition-all duration-200 cursor-pointer'>Track Your Registration Status</li>
             <li className='hover:text-slate-200 text-white hover:translate-x-1 transition-all duration-200 cursor-pointer'>Offline Forms For Registration In E-Roll</li>
             <li className='hover:text-slate-200 text-white hover:translate-x-1 transition-all duration-200 cursor-pointer'>Know Your Polling Booth</li>
